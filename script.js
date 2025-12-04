@@ -18,7 +18,7 @@ const tooltip = d3
   .append("div")
   .attr("class", "tooltip");
 
-d3.csv("data/merged_life_expectancy_dataset.csv").then(function (data) {
+d3.csv("merged_life_expectancy_dataset.csv").then(function (data) {
 
   console.log("First few rows of the dataset:", data.slice(0, 5));
  data.forEach(function (d) {
@@ -112,3 +112,4 @@ d3.csv("data/merged_life_expectancy_dataset.csv").then(function (data) {
     .attr("y", function (d) { return y(d.life_expectancy); })
     .attr("height", function (d) { return height - y(d.life_expectancy); });
 });
+
